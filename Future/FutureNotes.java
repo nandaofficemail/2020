@@ -16,6 +16,8 @@
      while(!Thread.interrupted()){
      
      }
-     while(Thread.currentThread().isinterrupted()){
+     while(Thread.currentThread().interrupt()){
      
      }
+
+     
