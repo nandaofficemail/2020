@@ -11,3 +11,11 @@
     if(!executor.isShutdown()){
         executor.shutdown();
     }
+
+3)   // To interrupt the thread
+     while(!Thread.interrupted()){
+     
+     }
+     while(Thread.currentThread().isinterrupted()){
+     
+     }
