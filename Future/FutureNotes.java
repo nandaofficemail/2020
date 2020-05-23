@@ -1,5 +1,5 @@
 1)   while(!future.isDone()){
-     TimeUnit.Seconds.Sleep(2);
+		TimeUnit.Seconds.Sleep(2);
      }
     
     while(!future.getDelay(5,TimeUnit.Seconds) <-5); // This is helpful to run the Threads only for 5 seconds.
@@ -11,7 +11,7 @@
     if(!executor.isShutdown()){
         executor.shutdown();
     }
-
+    
 3)   // To interrupt the thread
      while(!Thread.interrupted()){
      
@@ -19,5 +19,10 @@
      while(Thread.currentThread().interrupt()){
      
      }
-
-     
+	 
+	 
+4)   ThreadFactory threadFactory=Executors.defualtThreadFactory();
+	 for(int i=0;i<3;i++){
+		 Thread d=threadFactory.newThread(new Task());
+		 d.start();
+	}
