@@ -1,0 +1,195 @@
+ ********************************************************************
+FunctionalInterface
+- not requred
+- can have default and static methods
+
+ ********************************************************************
+To Solve Diamond Prolblem
+>  Prefer classes over interfaces  (class C implements IA,IB{}   new C().anyMethod())
+>  Select most specific interfaces than general interfaces.
+>   Use Super keyword
+ ********************************************************************
+ 2 Rules we need to remember 
+ 
+> A class always look for the methods only in the super class than in interfaces
+> refer diagram for a scenario where criss-crossing
+
+ *********************************************************************
+ 
+ Interface Vs Abstract Class After Java 8
+ 
+ Fields, Methods,Constructors,Accessbikity ., Multiple Inheritance
+***********************************************************************************************************
+General Code using function APIS 
+Integer[] a = { 1, 2, 3, 4, 5 };
+		List<Integer> integers = Arrays.asList(a);
+		UnaryOperator<Integer> one = (a1) -> a1 * 2;
+		Function<Integer, Integer> two = (a1) -> a1 + 1;
+		Function<Integer, Integer> combined = one.andThen(two);
+		List<Integer> integers2 = new ArrayList<>();
+		for (Integer integer : integers) {
+			integers2.add(combined.apply(integer));
+		}
+		integers2.stream().forEach(action -> System.err.println(action));
+	}
+***********************************************************************************************************
+ *********************************************************************
+	   List<Integer> list = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+         
+        Predicate<Integer> isEven = i -> i % 2 == 0;
+         
+        Predicate<Integer> isOdd = isEven.negate();
+ 
+        List<Integer> evenNumbers = list.stream()
+                    .filter(isEven)
+                    .collect(Collectors.toList());
+         
+        List<Integer> oddNumbers = list.stream()
+                .filter(isOdd)
+                .collect(Collectors.toList());
+         
+        System.out.println(evenNumbers);
+        System.out.println(oddNumbers);
+	   
+	   
+	   
+	   
+ ********************************************************************
+	   ODD Number
+	   
+	    IntPredicate isOdd = argument -> argument % 2 == 1;
+ 
+        //1. Use predicate directly
+         
+        System.out.println( isOdd.test(9) );    //true
+        System.out.println( isOdd.test(10) );   //false
+         
+        //2. Use predicate in filters
+         
+        IntStream stream = IntStream.range(1, 10); 
+         
+        List<Integer> oddNumbers = stream.filter(isOdd)
+                        .boxed()
+                        .collect(Collectors.toList());
+         
+        System.out.println(oddNumbers);
+*******************************************************************
+	    IntPredicate used in IntStream
+	
+*******************************************************************
+	Have a Common Function and pass Dynamic List . This is the use cas fo predicate,BiPredicate, and other APIS
+	
+	(employee id , stirng name)  -> employeeId >3 && (employee id , int age) -> age > 30;
+	
+	List toString will print, array toString will not 
+	
+	IntConsumer used in IntStream 
+	
+	Contains calls Equals, equals if overriden it will be called, else it will call object
+	
+	Generics apply Using I , S - Integer String
+	
+	HashMap uses BiConsumer
+	
+***********************************************************************************************************
+
+		URL url = new URL("https://www.example.com/");
+              try (InputStream is = url.openStream()) {
+                  return new String(is.readAllBytes());
+              }
+
+***********************************************************************************************************
+public static <T> T math(List<T> list, T init, BinaryOperator<T> accumulator) {
+        T result = init;
+        for (T t : list) {
+            result = accumulator.apply(result, t);
+        }
+        return result;
+    }
+    
+    result First.. Sames Applies to MaxBy, minBy, additon of numbers
+***********************************************************************************************************
+
+        Map<Integer, String> map = new LinkedHashMap<>();
+
+        map.put(1, "Java");
+        map.put(2, "C++");
+        map.put(3, "Rust");
+        map.put(4, "JavaScript");
+        map.put(5, "Go");
+
+        map.forEach((k, v) -> System.out.println(k + ":" + v));
+	   
+	   for (Map.Entry<K, V> entry : entrySet()) {
+            K k;
+            V v;
+            try {
+                k = entry.getKey();
+                v = entry.getValue();
+            } catch (IllegalStateException ise) {
+                // this usually means the entry is no longer in the map.
+                throw new ConcurrentModificationException(ise);
+            }
+            action.accept(k, v);
+        }
+***********************************************************************************************************
+  Unary Operator for Doubling the numbers 
+  public static <T> List<T> math(List<T> list, UnaryOperator<T> uo) {
+        List<T> result = new ArrayList<>();
+        for (T t : list) {
+            result.add(uo.apply(t));
+        }
+        return result;
+    }
+    public static <T> List<T> math(List<T> list,
+                                   UnaryOperator<T> uo, UnaryOperator<T> uo2) {
+        List<T> result = new ArrayList<>();
+        for (T t : list) {
+            result.add(uo.andThen(uo2).apply(t));
+        }
+        return result;
+    }
+***********************************************************************************************************
+Consumer Real Use:::: raise 1.1 for all employess
+
+public static void main(String[] args) {
+    List<Student> students = Arrays.asList(
+        new Student(1, 3, "John"),
+        new Student(2, 4, "Jane"), 
+        new Student(3, 3,"Jack"));
+
+    Consumer<Student> raiser = e -> {
+      e.gpa = e.gpa * 1.1;
+    };
+
+    raiseStudents(students, System.out::println);
+    raiseStudents(students, raiser.andThen(System.out::println));
+  }
+
+  private static void raiseStudents(List<Student> employees,
+      Consumer<Student> fx) {
+    for (Student e : employees) {
+      fx.accept(e);
+    }
+  }
+***********************************************************************************************************
+
+UnaryOperator real use : double the number and add 1  , so use apply andThen
+
+
+***********************************************************************************************************
+
+while(true){
+try{
+	...
+	return string;
+}
+catch(Exception e){
+	if(retry=4){
+		throw new RuntimeException("");
+	}
+  }
+}
+
+********************************************************************
+
