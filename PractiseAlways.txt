@@ -1,0 +1,4 @@
+1) ForkJoinPool BinarySearch
+2) SplitIterator
+3) Binaryoperator,Max/Min
+4) 
