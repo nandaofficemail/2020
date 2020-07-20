@@ -1,0 +1,27 @@
+///Stream-Reduce
+// Stream- boxed- Reduce
+//paralleStream - boxed- reduce
+
+
+
+List<String> list = getDataSet();
+list.parallelStream().forEach(System.out::println);
+
+int[] array = {1, 2, 3, 4, 5};
+int sum = Arrays.stream(arr).parallel().sum();
+
+
+
+int max = numbers.stream(Cutom).reduce(0, Integer::max, Integer::max);
+System.out.println("Parallel: " + max);
+
+ int max = StreamSupport.stream(new FindMaxSpliterator(array, 0, array.length - 1), true)
+                             .reduce(0, Integer::max, Integer::max);
+					    
+Arrays.stream(a).boxed().reduce
+
+
+int max = numbers.parallelStream().reduce(0, Integer::max, Integer::max);
+System.out.println("Parallel: " + max);
+
+
