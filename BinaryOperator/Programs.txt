@@ -1,0 +1,60 @@
+
+1)
+
+// Max by,Min By,sum of elements
+public class Binary {
+
+	public static void main(String[] args) {
+		BinaryOperator<Integer> binaryOperator = (a, b) -> a + b;
+		List<Integer> integers = IntStream.rangeClosed(0, 10).boxed().collect(Collectors.toList());
+		int result = new Binary().pass(integers, binaryOperator);
+		System.out.println(result); 
+	}
+
+	<T> T pass(List<T> integers, BinaryOperator<T> binaryOperator) {
+		T result = null;
+		for (T integer : integers) {
+			if (result == null) {
+				result = integer;
+			}
+			result = binaryOperator.apply(result, integer);
+		}
+		return result;
+	}
+}
+
+
+2)
+
+public static void main(String[] args) {
+		Comparator<Integer> comparator = Comparator.comparing(Integer::intValue);
+		BinaryOperator<Integer> binaryOperator = BinaryOperator.maxBy(comparator);
+		List<Integer> integers = IntStream.rangeClosed(0, 100).boxed().collect(Collectors.toList());
+		Integer result = null;
+		for (Integer integer : integers) {
+			if (result == null)
+				result = integer;
+			result = binaryOperator.apply(result, integer);
+		}
+		System.out.println(result);
+	}
+3)
+
+public static void main(String[] args) {
+		Employee[] employees = new Employee[10];
+		int i = 0;
+		for (Employee employee : employees) {
+			employee = new Employee();
+			employee.setSalary(i);
+			employees[i] = employee;
+			i++;
+		}
+		Comparator<Employee> comparator = Comparator.comparing(Employee::getSalary);
+		BinaryOperator<Employee> binaryOperator = BinaryOperator.minBy(comparator);
+		Employee result = null;
+		for (Employee employee : employees) {
+			if (result == null)result = employee;
+			result = binaryOperator.apply(result, employee);
+		}
+		System.out.println(result.getSalary());
+	}
