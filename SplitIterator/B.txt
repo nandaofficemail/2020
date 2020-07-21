@@ -1,0 +1,92 @@
+package a;
+
+import java.util.Spliterator;
+import java.util.function.Consumer;
+import java.util.stream.StreamSupport;
+
+// case 2
+class Split {
+	public static void main(String[] args) {
+		Employee[] array = new Employee[5];
+		array[0] = new Employee(1);
+		array[1] = new Employee(2);
+		array[2] = new Employee(3);
+		array[3] = new Employee(4);
+		array[4] = new Employee(5);
+		Employee h = StreamSupport.stream(new Split.CustomSplitIterator<Employee>(array, 0, array.length - 1), true)
+				.reduce(null, Split.Employee::max, Split.Employee::max);
+		System.out.println(h.salary);
+	}
+
+	static class CustomSplitIterator<T> implements Spliterator<T> {
+
+		T[] t;
+		int start;
+		int end;
+
+		public CustomSplitIterator(T[] t, int s, int e) {
+			this.t = t;
+			this.start = s;
+			this.end = e;
+		}
+
+		@Override
+		public Spliterator<T> trySplit() {
+			if (end - start < 2)
+				return null;
+			int mid = (start + end) / 2;
+			int oldStart = start;
+			start = mid + 1;
+			return new CustomSplitIterator<T>(t, oldStart, mid);
+		}
+
+		@Override
+		public boolean tryAdvance(Consumer<? super T> action) {
+			if (start <= end) {
+				action.accept(t[start]);
+				start++;
+				return true;
+			}
+			return false;
+		}
+
+		@Override
+		public int characteristics() {
+			return SIZED | IMMUTABLE;
+		}
+
+		@Override
+		public long estimateSize() {
+			return end - start;
+		}
+
+	}
+
+	static class Employee {
+
+		int salary;
+
+		public Employee(int a) {
+			this.salary = a;
+		}
+
+		public void setSalary(int salary) {
+			this.salary = salary;
+		}
+
+		public int getSalary() {
+			return salary;
+		}
+
+		static Employee max(Employee a, Employee b) {
+			if (a == null) {
+				a = b;
+			}
+			if (a.salary > b.salary)
+				return a;
+			else
+				return b;
+
+		}
+	}
+}
