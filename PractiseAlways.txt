@@ -1,6 +1,6 @@
 1) BlockingQueue Custom from GitHub
 1) ForkJoinPool BinarySearch
 2) Custom Iterator
-3) SplitIterator
-4) Binaryoperator,Max/Min
+3) SplitIterator  (Max,Min) Use Parallel Stream we use Split Iterator. Stream Suppport.stream().reduce
+4) Binaryoperator,Max/Min // Sum , MaxBy MinBy T result; if(result ==null) result = eachObject ...
 4) 
