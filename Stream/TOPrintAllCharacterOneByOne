@@ -1,1 +1,19 @@
 
+public class TOPrintAllCharacterOneByOne {
+
+	public static void main(String[] args) {
+
+		List<String> list = new ArrayList<>();
+		list.add("Hello");
+		list.add("Computer");
+
+		list.stream().flatMap(mapper -> IntStream.range(0, mapper.length()).mapToObj(new IntFunction<Character>() {
+			@Override
+
+			public Character apply(int value) {
+				return mapper.charAt(value);
+			}
+		})).forEach(action -> System.out.println(action));
+
+	}
+}
