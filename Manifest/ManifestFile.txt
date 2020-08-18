@@ -1,0 +1,45 @@
+https://docs.oracle.com/javase/tutorial/deployment/jar/secman.html
+https://docs.oracle.com/javase/tutorial/deployment/jar/index.html
+
+Manifest-Version: 1.0
+Class-Path: .
+Main-Class: a.B
+Ant-Version: Apache Ant 1.7.1
+Created-By: 16.3-b01 (Sun Microsystems Inc.)
+Main-Class: com.example.MainClass
+Class-Path: lib/lib1.jar lib/lib2.jar
+
+Main-Class: com.java2s.Main 
+Sealed: true
+
+Name: book/data/ 
+Sealed: false
+
+Name: images/logo.bmp
+Content-Type: image/bmp
+
+Name: java/util/
+Specification-Title: "Java Utility Classes" 
+
+Specification-Version: "1.2"
+Specification-Vendor: "Sun Microsystems, Inc.".
+
+Implementation-Title: "java.util" 
+Implementation-Version: "build57"
+Implementation-Vendor: "Sun Microsystems, Inc."
+
+Signature-Version: 1.0
+SHA1-Digest-Manifest: h1yS+K9T7DyHtZrtI+LxvgqaMYM=
+Created-By: 1.7.0_06 (Oracle Corporation)
+
+Name: test/classes/ClassOne.class
+SHA1-Digest: fcav7ShIG6i86xPepmitOVo4vWY=
+
+Name: test/classes/ClassTwo.class
+SHA1-Digest: xrQem9snnPhLySDiZyclMlsFdtM=
+
+Name: test/images/ImageOne.gif
+SHA1-Digest: kdHbE7kL9ZHLgK7akHttYV4XIa0=
+
+Name: test/images/ImageTwo.gif
+SHA1-Digest: mF0D5zpk68R4oaxEqoS9Q7nhm60=
