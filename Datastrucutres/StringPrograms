@@ -100,7 +100,7 @@ public class StringMethods {
 	}
 
 	// 8) Print all words- with counts-with their maximum count, Same Applicable for Characters also
-	public static void main(String[] args) {
+	public static void main8(String[] args) {
 		String[] a = { "Hi", "how", "arey", "well", "good", "sum", "well", "good" ,"good" };
 		LinkedHashMap<String, Integer> hashMap = new LinkedHashMap<>();
 		for (String lo : a) {
@@ -138,4 +138,15 @@ public class StringMethods {
 			}
 		}
 	}
+	
+	
+	
+	// 9) Find number of occurence of a String without for-loop. Use Replace- All. This can also be done using forLoop- HashMap
+	public static void main(String[] args){
+	  String a="hihowareyouall";
+	  int count =a.length()-a.replaceAll("a","").length();
+	  System.out.println(count);
+	}
+	
+	
 }
