@@ -39,7 +39,7 @@ public class StringMethods {
 		System.out.println(a == b);
 	}
 	
-	//4) to print all chars in a string
+	// 4) to print all chars in a string
 	public static void main4(String[] args) {
 		String a="hihowareyou";
 		// to Print in the order of char []
