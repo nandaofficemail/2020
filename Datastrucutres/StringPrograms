@@ -99,7 +99,7 @@ public class StringMethods {
 		System.out.println(b);
 	}
 
-	// 8) Print all words- with counts-with their maximum count
+	// 8) Print all words- with counts-with their maximum count, Same Applicable for Characters also
 	public static void main(String[] args) {
 		String[] a = { "Hi", "how", "arey", "well", "good", "sum", "well", "good" ,"good" };
 		LinkedHashMap<String, Integer> hashMap = new LinkedHashMap<>();
