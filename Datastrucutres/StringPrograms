@@ -53,4 +53,38 @@ public class StringMethods {
 			System.out.println(t); 
 		}
 	}
+	
+	// 5) hihowareyou - print all Permutations
+	public static void main5(String[] args) {
+		String a = "hihowareyou";
+		StringBuffer buffer = null;
+		for (int i = 0; i < a.length(); i++) {
+			buffer = new StringBuffer();
+			buffer.append(a.charAt(i));
+			System.out.println(buffer);
+			for (int j = 1; j < a.length(); j++) {
+				buffer.append(a.charAt(j));
+				System.out.println(buffer);
+			}
+		}
+	}
+
+	// 6) hihowareyou - print Permutations of this String. Make a List to Remove duplicates in the below Proram
+	public static void main(String[] args) {
+		String a = "hihowareyou";
+		process("", a);
+	}
+
+	static void process(String per, String content) {
+		if (content.length() == 0)
+			System.out.println(per);
+		else
+		{
+			for (int i = 0; i < content.length(); i++) {
+				process(per + content.charAt(i), content.substring(0, i) + content.substring(i + 1));
+			}
+		}
+	}
+	
+	// 7) without using third or temp variable in java
 }
