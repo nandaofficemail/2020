@@ -100,9 +100,9 @@ public class StringMethods {
 	}
 
 	// 8) Print all words- with counts-with their maximum count
-	public static void main8(String[] args) {
+	public static void main(String[] args) {
 		String[] a = { "Hi", "how", "arey", "well", "good", "sum", "well", "good" ,"good" };
-		HashMap<String, Integer> hashMap = new HashMap<>();
+		LinkedHashMap<String, Integer> hashMap = new LinkedHashMap<>();
 		for (String lo : a) {
 			int count = 1;
 			if (hashMap.get(lo) != null) {
