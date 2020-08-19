@@ -6,3 +6,51 @@ Refere these two quiz :
 
 https://www.javatpoint.com/java-string-faqs
 https://javaconceptoftheday.com/java-interview-programs-on-strings/
+
+
+
+public class StringMethods {
+
+	// 1) anagrams a- howareyou b- youhihow should say anagram or not
+	public static void main1(String[] args) {
+		String a = "howareyou";
+		String b = "youarehow";
+		char c[] = a.toCharArray();
+		char d[] = b.toCharArray();
+		Arrays.sort(c);
+		Arrays.sort(d);
+		if (Arrays.equals(c, d)) {
+			System.out.println("Both are anagrams");
+		}
+	}
+
+	// 2) reverse equal to string or not
+	public static void main2(String[] args) {
+		String a = "hihowareyou";
+		String b = "uoyerawohih";
+		String result = a + b;
+		System.out.println(result.contains(a));
+	}
+
+	// 3) concat creates a String in the Heap. so double equals wont be true. Applies to concat and + also
+	public static void main3(String[] args) {
+		String a = "howareyou";
+		String b = a.concat("howareyou").substring(a.length());
+		System.out.println(a == b);
+	}
+	
+	//4) to print all chars in a string
+	public static void main4(String[] args) {
+		String a="hihowareyou";
+		// to Print in the order of char []
+		for (int i = 0; i < a.length(); i++) {
+			char t=a.charAt(i);
+			System.out.println(t); 
+		}
+		//to Print in Reverse
+		for (int i = a.length()-1; i >=0; i--) {
+			char t=a.charAt(i);
+			System.out.println(t); 
+		}
+	}
+}
