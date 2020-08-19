@@ -124,7 +124,7 @@ public class StringMethods {
 				maxValue = value;
 			}
 		}
-		// System.out.println("Maxmimu Value is "+maxValue); 
+		System.out.println("Maxmimu Value is "+maxValue); 
 		
 		// get the maximum value correspong key;
 		
