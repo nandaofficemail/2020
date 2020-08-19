@@ -87,4 +87,55 @@ public class StringMethods {
 	}
 	
 	// 7) without using third or temp variable in java
+	public static void main7(String[] args) {
+		String a = "Hi";
+		String b = "Bye";
+		a = a + b; // HiBye
+					// Bye
+
+		b = a.substring(0, a.length() - b.length());
+		a = a.substring(b.length());
+		System.out.println(a);
+		System.out.println(b);
+	}
+
+	// 8) Print all words- with counts-with their maximum count
+	public static void main8(String[] args) {
+		String[] a = { "Hi", "how", "arey", "well", "good", "sum", "well", "good" ,"good" };
+		HashMap<String, Integer> hashMap = new HashMap<>();
+		for (String lo : a) {
+			int count = 1;
+			if (hashMap.get(lo) != null) {
+				int newCount = hashMap.get(lo);
+				hashMap.put(lo, ++newCount);
+			} else
+				hashMap.put(lo, count);
+		}
+		System.out.println(hashMap);
+
+		// get the Maximum value in the list
+
+		int maxValue = 0;
+		Iterator<String> itr = hashMap.keySet().iterator();
+		while (itr.hasNext()) {
+			String h=itr.next();
+			Integer value = hashMap.get(h);
+			if (value > maxValue) {
+				maxValue = value;
+			}
+		}
+		// System.out.println("Maxmimu Value is "+maxValue); 
+		
+		// get the maximum value correspong key;
+		
+		Iterator<String> itr2=hashMap.keySet().iterator();
+		while (itr2.hasNext()) {
+			String string = (String) itr2.next();
+			Integer value=hashMap.get(string);
+			if(value==maxValue){
+				System.out.println("Maximum key is "+string);
+				System.out.println("Maximum value is "+value);
+			}
+		}
+	}
 }
