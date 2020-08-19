@@ -11,3 +11,20 @@ class Fibiconi {
 		}
 	}
 }
+
+
+// 1 Occurs Two Times in above code. to Skip Below Code
+class Fibiconi {
+
+	public static void main(String[] args) {
+		int a = 0, b = 1, result;
+		System.out.print(a + " " + b);
+		for (int i = 2; i < 10; ++i) {
+			result = a + b;
+			if(result>1)
+				System.out.print(" " + result);
+			a = b;
+			b = result;
+		}
+	}
+}
