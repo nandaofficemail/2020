@@ -149,4 +149,33 @@ public class StringMethods {
 	}
 	
 	
+	
+	
+	//10) Longest SubString without repeating the character.
+	
+	public static void main(String[] args) {
+		String a = "javaconceptoftheday";
+
+		int count = 0;
+		String longestSubString = "";
+		LinkedHashMap<Character, Integer> hashMap = new LinkedHashMap<>();
+
+		for (int i = 0; i < a.length(); i++) {
+			char r = a.charAt(i);
+			if (!hashMap.containsKey(r)) {
+				hashMap.put(r, i);
+			} else {
+				i = hashMap.get(r);
+				hashMap.clear();
+			}
+			if (hashMap.size() > count) {
+				count = hashMap.size();
+				longestSubString=hashMap.keySet().toString();
+			}
+		}
+		System.out.println(longestSubString);
+		System.out.println(count); 
+		
+	}
+	
 }
