@@ -111,3 +111,21 @@ public class TestMatrix {
 	}
 }
 
+5) 	Object and their Conventions with Arrays
+   	------------------------------------------
+	
+	Object higher , String lower Wont work. It should be equal or less. Exception for int[] and Object[]- this wont work as it is a Exception
+	
+	Higher Order Primitives also wont work
+
+		OK   Object[] h1 = new String[] {};
+		OK   Object h2 = new String("");
+		OK   Object h3 = new String[] { "a", "" };
+		OK   Object[] h4 = new String[] { "a", "" };
+		NTK  Object[][] h5 = new String[] { "a", "" };
+
+		OK                 Object object = new int[] { 1, 2 };
+		NTK(EXCEPTIN CASE) Object objec[] = new int[] { 1, 2 };
+		NOTOK              long[] obje[] = new int[][] { { 1, 2 }, { 3, 4 } };
+
+6)  
