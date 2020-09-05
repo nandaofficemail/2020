@@ -1,12 +1,18 @@
 C:
 -----------
-lsb_release -a
-lsb_release -d
+cat /etc/os-release
+cat /etc/issue
+cat /etc/os-release
+cat /etc/lsb-release
 
 
 D:
 ----------
 df -h
+
+H:
+--------------
+hostnamectl
 
 
 F:
@@ -35,6 +41,8 @@ mount 10.10.0.10:/backups
 S:
 ----------
 source /etc/environment
+
+sudo apt-get install 
 
 sudo apt install ./google-chrome-stable_current_amd64.deb	
 
@@ -85,6 +93,28 @@ W:
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 
+Very General Commands
+--------------------
+
+ls
+cd
+mv
+rm
+mkdir
+history
+df
+du
+free
+uname -a
+top
+man man
+man intro 
+info
+man -h 
+man -help
+whatis cd
+whatis man
+whatis help
 
 Others:
 =====================
