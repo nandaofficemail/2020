@@ -53,6 +53,8 @@ S:
 sudo apt install linux-modules-extra-$(uname -r)
 sudo apt install linux-generic
 
+systemctl -t service -a |grep Samba
+
 source /etc/environment
 
 sudo apt-get install 
