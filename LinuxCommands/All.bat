@@ -1,4 +1,5 @@
 wmic computersystem get domain
+wmic bios get serialnumber
 
 ipconfig /all
 ipconfig /flushdns
