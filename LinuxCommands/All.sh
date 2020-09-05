@@ -1,12 +1,30 @@
+C:
+-----------
+lsb_release -a
+lsb_release -d
+
+
 D:
 ----------
+df -h
+
 
 F:
 ----------
 
 fuser -m MOUNT_POINT
 
+L:
+-------------
+lsb_release -a
+lsb_release -d
+
 df -h
+
+G
+------------
+gnome-system-monitor
+
 
 M:
 ---------
@@ -16,6 +34,26 @@ mount 10.10.0.10:/backups
 
 S:
 ----------
+source /etc/environment
+
+sudo apt install ./google-chrome-stable_current_amd64.deb	
+
+sudo passwd ====> to change root user password from current user
+sudo snap install notepad-plus-plus
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt-get install 
+sudo apt-get remove
+dpkg --list
+sudo apt-get remove <package-name>
+sudo apt-get purge <package-name>
+sudo apt-get autoremove
+sudo apt install ./google-chrome-stable_current_amd64.deb
+sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
+sudo apt update
+sudo apt install openjdk-8-jdk
+sudo nano /etc/environment
+
 sudo apt update
 sudo apt update
 sudo apt install cifs-utils
@@ -41,6 +79,10 @@ umount 10.10.0.10:/backups
 umount /var/backups
 umount -l MOUNT_POINT
 umount -f MOUNT_POINT
+
+W:
+-----------------
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 
 
 
