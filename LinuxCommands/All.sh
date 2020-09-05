@@ -9,7 +9,14 @@ cat /etc/lsb-release
 D:
 ----------
 df -h
+df -Th
 dmesg
+
+E:
+----------
+
+echo $(uname -r)
+echo $LANG
 
 H:
 --------------
@@ -25,8 +32,8 @@ L:
 -------------
 lsb_release -a
 lsb_release -d
+locale
 
-df -h
 
 G
 ------------
