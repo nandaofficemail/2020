@@ -9,6 +9,7 @@ cat /etc/lsb-release
 D:
 ----------
 df -h
+dmesg
 
 H:
 --------------
