@@ -40,6 +40,9 @@ mount 10.10.0.10:/backups
 
 S:
 ----------
+sudo apt install linux-modules-extra-$(uname -r)
+sudo apt install linux-generic
+
 source /etc/environment
 
 sudo apt-get install 
