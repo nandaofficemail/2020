@@ -46,6 +46,7 @@ M:
 ---------
 mount /var/backups
 mount 10.10.0.10:/backups
+mount.cifs --version
 
 
 S:
