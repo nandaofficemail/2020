@@ -51,12 +51,16 @@ mount.cifs --version
 
 S:
 ----------
+
+sudo nano /etc/fstab
+sudo nano /etc/fstab   --------->  sudo mount -a
+sudo nano /etc/environment
+source /etc/environment
+
 sudo apt install linux-modules-extra-$(uname -r)
 sudo apt install linux-generic
 
 systemctl -t service -a |grep Samba
-
-source /etc/environment
 
 sudo apt-get install 
 
@@ -76,7 +80,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 sudo apt update
 sudo apt install openjdk-8-jdk
-sudo nano /etc/environment
+
 
 sudo apt update
 sudo apt update
@@ -85,10 +89,10 @@ sudo dnf install cifs-utils
 sudo apt install nfs-common
 sudo mkdir /var/backups
 sudo mount -t nfs 10.10.0.10:/backups /var/backups
-sudo nano /etc/fstab
+
 sudo mkdir /var/backups
 sudo mkdir /mnt/win_share
-sudo nano /etc/fstab   --------->  sudo mount -a
+
 sudo mount -t cifs -o username=<win_share_user> //WIN_SHARE_IP/<share_name> /mnt/win_share
 sudo mount -t cifs -o username=<win_share_user>,password=<win_share_password> //WIN_SHARE_IP/<share_name> /mnt/win_share
 sudo mount -t cifs -o username=<win_share_user>,domain=<win_domain> //WIN_SHARE_IP/<share_name> /mnt/win_share
