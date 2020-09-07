@@ -88,7 +88,7 @@ sudo mount -t nfs 10.10.0.10:/backups /var/backups
 sudo nano /etc/fstab
 sudo mkdir /var/backups
 sudo mkdir /mnt/win_share
-sudo nano /etc/fstab
+sudo nano /etc/fstab   --------->  sudo mount -a
 sudo mount -t cifs -o username=<win_share_user> //WIN_SHARE_IP/<share_name> /mnt/win_share
 sudo mount -t cifs -o username=<win_share_user>,password=<win_share_password> //WIN_SHARE_IP/<share_name> /mnt/win_share
 sudo mount -t cifs -o username=<win_share_user>,domain=<win_domain> //WIN_SHARE_IP/<share_name> /mnt/win_share
