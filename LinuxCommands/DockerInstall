@@ -19,3 +19,5 @@
 > sudo groupadd docker
 > sudo usermod -aG docker $USER  (from Right to left)
 > more /etc/passwd
+> tail -5 /etc/passwd
+> head -5 /etc/passwd
