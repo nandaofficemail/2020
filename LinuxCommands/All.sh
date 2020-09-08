@@ -33,6 +33,7 @@ L:
 -------------
 lsb_release -a
 lsb_release -d
+lsb_release -cs
 locale
 lsmod | egrep 'cifs'
 
