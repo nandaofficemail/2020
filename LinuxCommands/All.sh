@@ -4,6 +4,7 @@ cat /etc/os-release
 cat /etc/issue
 cat /etc/os-release
 cat /etc/lsb-release
+cat /etc/apt/sources.list
 
 
 D:
