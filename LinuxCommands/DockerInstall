@@ -15,3 +15,6 @@
 > sudo apt-get install docker.io
 > systemctl -t service -a | grep 'docker'
 > systemctl status docker
+> sudo systemctl restart docker
+> sudo groupadd docker
+> sudo usermod -aG docker $USER  (from Right to left)
