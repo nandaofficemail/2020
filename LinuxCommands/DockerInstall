@@ -18,3 +18,4 @@
 > sudo systemctl restart docker
 > sudo groupadd docker
 > sudo usermod -aG docker $USER  (from Right to left)
+> more /etc/passwd
