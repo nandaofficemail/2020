@@ -22,3 +22,6 @@
 > tail -5 /etc/passwd
 > head -5 /etc/passwd
 > adduser username (create New User)
+> docker run hello-world
+> docker run -it ubuntu bash
+> docker exec -it ubuntu bash (this will work only if container is running)
