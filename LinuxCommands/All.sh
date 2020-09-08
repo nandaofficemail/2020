@@ -103,6 +103,13 @@ sudo chmod 600 /etc/win-credentials
 sudo mount -t cifs -o credentials=/etc/win-credentials //WIN_SHARE_IP/<share_name> /mnt/win_share
 sudo umount /mnt/win_share
 
+systemctl -t service -a 
+systemctl status docker
+sudo systemctl -t service -a | grep 'Samba'
+
+
+
+
 U
 ----
 umount 10.10.0.10:/backups 
