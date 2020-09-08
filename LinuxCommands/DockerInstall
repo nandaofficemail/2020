@@ -21,3 +21,4 @@
 > more /etc/passwd
 > tail -5 /etc/passwd
 > head -5 /etc/passwd
+> adduser username
