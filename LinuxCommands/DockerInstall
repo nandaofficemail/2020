@@ -13,3 +13,5 @@
 > sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu  $(lsb_release -cs)  stable"
 > sudo  add-apt-rspoitory "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 > sudo apt-get install docker.io
+> systemctl -t service -a | grep 'docker'
+> systemctl status docker
