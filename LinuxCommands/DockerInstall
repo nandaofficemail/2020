@@ -28,6 +28,8 @@
 
 
 
+
+
 DOCKER
 ------------
 
@@ -42,5 +44,6 @@ DOCKER
 > docker run -it busybox echo hi there
 > docker system prune
 > docker logs 034343
-> 
+> docker stop <containerid>
+> docker kill <containerid>
 
