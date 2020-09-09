@@ -25,3 +25,11 @@
 > docker run hello-world
 > docker run -it ubuntu bash
 > docker exec -it ubuntu bash (this will work only if container is running)
+
+
+
+DOCKER
+------------
+
+> sudo systemctl status docker
+> sudo systemctl -t service -a | grep docker
