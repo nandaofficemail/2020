@@ -37,5 +37,10 @@ DOCKER
 > sudo systemctl restart docker
 > sudo systemctl -t service -a | grep docker
 > cat /etc/app/sources.list  | cat etc/passwd  | passwd | su nanda2 | passwd
+> docker create busybox:latest echo hi there (default command)
+> docker start 034343 | docker start -a 034343 
+> docker run -it busybox echo hi there
+> docker system prune
+> docker logs 034343
 > 
 
