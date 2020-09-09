@@ -35,3 +35,6 @@ DOCKER
 > sudo systemctl start docker
 > sudo systemctl stop docker
 > sudo systemctl -t service -a | grep docker
+> cat /etc/app/sources.list  | cat etc/passwd
+> 
+
