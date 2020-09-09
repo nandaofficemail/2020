@@ -32,4 +32,6 @@ DOCKER
 ------------
 
 > sudo systemctl status docker
+> sudo systemctl start docker
+> sudo systemctl stop docker
 > sudo systemctl -t service -a | grep docker
