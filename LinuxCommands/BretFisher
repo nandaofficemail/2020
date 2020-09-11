@@ -1,0 +1,8 @@
+To Delate Images
+--------
+
+
+docker image prune
+docker system prune
+docker image prune -a
+docker system df
