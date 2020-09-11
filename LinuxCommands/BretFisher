@@ -7,6 +7,8 @@ docker system prune
 docker image prune -a
 docker system df
 
+sudo -i
+
 Some Other Commands::
 --------------
 
