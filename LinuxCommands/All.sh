@@ -87,6 +87,7 @@ sudo apt install openjdk-8-jdk
 sudo apt update
 sudo apt update
 sudo apt install cifs-utils
+sudo apt-get update && apt-get install -y iputils-ping
 sudo dnf install cifs-utils
 sudo apt install nfs-common
 sudo mkdir /var/backups
