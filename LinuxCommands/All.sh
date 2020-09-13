@@ -61,7 +61,8 @@ source /etc/environment
 
 sudo apt install linux-modules-extra-$(uname -r)
 sudo apt install linux-generic
-sudo apt remove firefox --pruge
+sudo apt remove firefox --pruge (to remove a software)
+sudo dpkg -i code.deb ( to install a software) 
 
 systemctl -t service -a |grep Samba
 
