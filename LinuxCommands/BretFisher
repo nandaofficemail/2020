@@ -41,3 +41,7 @@ ssh -v nanda host.com
 systemctl start docker
 systemctl restart docker
 systemctl stop docker
+
+gzip a.txt
+gzip a.txt.gz -d
+
