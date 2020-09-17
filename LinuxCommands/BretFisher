@@ -24,3 +24,20 @@ type -a docker
 type -a time
 type docker
 /usr/bin/time docker container ls
+
+docker images --filter "since=61233"
+docker images --format "{{.ID}}"
+docker ps -l
+docker ps -a
+docker ps -n 5
+docker ps -s
+
+docker run -P (default run port)
+uname -MVRNOISPA
+
+ssh -l nanda host.com
+ssh -v -l nanda host.com
+ssh -v nanda host.com
+systemctl start docker
+systemctl restart docker
+systemctl stop docker
