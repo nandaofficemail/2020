@@ -26,6 +26,7 @@ type docker
 /usr/bin/time docker container ls
 
 docker images --filter "since=61233"
+docker images --filter "status=created"
 docker images --format "{{.ID}}"
 docker ps -l
 docker ps -a
@@ -51,4 +52,12 @@ bzip2 -d a.txt.bz2
 tar -cvf a.tar (CREATE)
 tar -tvf a.tar (VIEW) 
 tar -xvf a.tar (EXTRACT)
+
+docker exec -it test ps aux | sh | top -b 
+docker image history --no-trunc
+sudo chmod 777 ~/.docker/config.json
+ab -n (apache utils for load test - apache bench mark tool)
+curl -fSsL http://
+$(curl http://localhost:54)
+wget -O - http://
 
