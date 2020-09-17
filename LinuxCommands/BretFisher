@@ -22,4 +22,5 @@ chmod 777 ~/.docker/.config.json
 
 type -a docker
 type -a time
+type docker
 /usr/bin/time docker container ls
