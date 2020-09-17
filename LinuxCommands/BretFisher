@@ -16,6 +16,9 @@ docker run --rm -d  alpine:latest
 docker run --rm -it  alpine:latest
 docker build --pull --rm -f ./Dockerfile -t rt:1.0 .
 docker container run --publish 99:80 nginx
+sudo apt-get install docker-ce="18.03"
+chmod 777 ~/.docker/.config.json
+
 
 type -a docker
 type -a time
