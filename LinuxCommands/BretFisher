@@ -110,7 +110,7 @@ ARG user
 USER $user
 
 $ docker build --build-arg user=what_user .
-
+Answer: What User
 
 FROM ubuntu
 ARG CONT_IMG_VER
