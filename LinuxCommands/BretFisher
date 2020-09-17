@@ -121,3 +121,8 @@ $ docker build --build-arg CONT_IMG_VER=v2.0.1 .
 
 RUN instruction uses v1.0.0
 
+HEALTHCHECK
+-------------------------------------
+
+HEALTHCHECK --interval=5m --timeout=3s \
+  CMD curl -f http://localhost/ || exit 1
