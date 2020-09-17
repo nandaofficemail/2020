@@ -45,3 +45,5 @@ systemctl stop docker
 gzip a.txt
 gzip a.txt.gz -d
 
+bzip2 a.txt
+bzip2 -d a.txt.bz2
