@@ -62,4 +62,8 @@ $(curl http://localhost:54)
 echo $(curl -L http://google.co.in)
 echo $((1+2))
 wget -O - http://
+LinuxCommands/BretFisher
+date > output.file  2>&1  ( if error it redirects to output.file) 
+echo h > gt ( Overwrite h to gt file )
+echo h >> gt (append h to gt file)
 
