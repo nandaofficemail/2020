@@ -78,3 +78,14 @@ RUN wget -O myfile.tar.gz http://example.com/myfile.tar.gz \
 
 
 ADD myfile.tar.gz ./
+
+
+How to Use USER
+---------------------------------
+
+FROM alpine:3.8
+RUN adduser -D myuser
+USER myuser
+ENTRYPOINT ["sleep","5"]
+CMD ["10"]
+
