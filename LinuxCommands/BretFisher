@@ -68,3 +68,13 @@ date > output.file  2>&1  ( if error it redirects to output.file)
 echo h > gt ( Overwrite h to gt file )
 echo h >> gt (append h to gt file)
 date | tee file1 | ls  ( file1 will have date and ls in the output)
+
+THIS can be replaced by ADD INSTRUCTION  also ADD EXTARCT .tar.gz file to the container
+--------------------------------------------------------------------------------------
+
+RUN wget -O myfile.tar.gz http://example.com/myfile.tar.gz \
+    && tar -xvf myfile.tar.gz -C /usr/src/myapp \
+    && rm myfile.tar.gz
+
+
+ADD myfile.tar.gz ./
