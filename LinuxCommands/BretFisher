@@ -66,4 +66,4 @@ LinuxCommands/BretFisher
 date > output.file  2>&1  ( if error it redirects to output.file) 
 echo h > gt ( Overwrite h to gt file )
 echo h >> gt (append h to gt file)
-
+da | tee file1 | command2
