@@ -47,3 +47,8 @@ gzip a.txt.gz -d
 
 bzip2 a.txt
 bzip2 -d a.txt.bz2
+
+tar -cvf a.tar (CREATE)
+tar -tvf a.tar (VIEW) 
+tar -xvf a.tar (EXTRACT)
+
