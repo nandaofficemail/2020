@@ -52,6 +52,7 @@ bzip2 -d a.txt.bz2
 tar -cvf a.tar (CREATE)
 tar -tvf a.tar (VIEW) 
 tar -xvf a.tar (EXTRACT)
+tar -xvf a.tar.gz -C cd a (Extract and copy to a Folder )
 
 docker exec -it test ps aux | sh | top -b 
 docker image history --no-trunc
