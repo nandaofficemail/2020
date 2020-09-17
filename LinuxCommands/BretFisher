@@ -89,3 +89,35 @@ USER myuser
 ENTRYPOINT ["sleep","5"]
 CMD ["10"]
 
+
+
+WORKDIR
+--------------
+
+WORKDIR /a
+WORKDIR b
+WORKDIR c
+RUN pwd  (output /a/b/c )
+
+
+
+ARG
+---------
+
+FROM busybox
+USER ${user:-some_user}
+ARG user
+USER $user
+
+$ docker build --build-arg user=what_user .
+
+
+FROM ubuntu
+ARG CONT_IMG_VER
+ENV CONT_IMG_VER v1.0.0
+RUN echo $CONT_IMG_VER
+
+$ docker build --build-arg CONT_IMG_VER=v2.0.1 .
+
+RUN instruction uses v1.0.0
+
