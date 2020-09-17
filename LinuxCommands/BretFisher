@@ -16,3 +16,7 @@ docker run --rm -d  alpine:latest
 docker run --rm -it  alpine:latest
 docker build --pull --rm -f ./Dockerfile -t rt:1.0 .
 docker container run --publish 99:80 nginx
+
+type -a docker
+type -a time
+/usr/bin/time docker container ls
