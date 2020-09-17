@@ -59,5 +59,7 @@ sudo chmod 777 ~/.docker/config.json
 ab -n (apache utils for load test - apache bench mark tool)
 curl -fSsL http://
 $(curl http://localhost:54)
+echo $(curl -L http://google.co.in)
+echo $((1+2))
 wget -O - http://
 
