@@ -59,6 +59,8 @@ tar -xvf a.tar.gz -C cd a (Extract and copy to a Folder )
 download & installl & set in Path
 -------------------------------------
 
+snap install go --classic
+
 tar -C /usr/local -xzf go-1.15.tar.gz 
 
 export PATH=$PATH: /usr/local/go/bin
