@@ -54,6 +54,22 @@ tar -tvf a.tar (VIEW)
 tar -xvf a.tar (EXTRACT)
 tar -xvf a.tar.gz -C cd a (Extract and copy to a Folder )
 
+----
+
+download & installl & set in Path
+-------------------------------------
+
+tar -C /usr/local -xzf go-1.15.tar.gz 
+
+export PATH=$PATH: /usr/local/go/bin
+
+go version
+
+go get githu.com/.../...
+
+
+--------------
+
 docker exec -it test ps aux | sh | top -b 
 docker image history --no-trunc
 sudo chmod 777 ~/.docker/config.json
