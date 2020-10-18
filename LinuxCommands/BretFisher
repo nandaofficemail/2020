@@ -33,6 +33,20 @@ docker ps -a
 docker ps -n 5
 docker ps -s
 
+docker container ls -lq  --->  gives container id, this is used to commit
+docker container export  -o a.tar $(docker container ls -lq)
+docker image ls --format 'table {{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}' httpd
+ls -l a.tar
+tar -xvf lighttpd-1.1.tar | grep wget
+docker image import lighttpd-1.1.tar lighthtt:1.1
+docker image ls lighthtt:1.?
+docker image history lighttpd:1.0 | trunc
+
+Image chain happens usually
+Cloud Native Compting Foundation
+
+
+
 docker run -P (default run port)
 uname -MVRNOISPA
 
