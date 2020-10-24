@@ -1,3 +1,9 @@
+not in sudoers file. this incident will be reported
+-----------------------------------------------
+
+cp /etc/sudoers /etc/sudoers.orginal
+
+
 To Delate Images
 --------
 
