@@ -6,6 +6,7 @@ docker buildx build --
 WITH PWD:
 --------------
 > docker context create --docker "host=tcp://ip172-18-0-6-bufhg71qckh000cq0ae0.direct.labs.play-with-docker.com:2375" pwd
+> docker context create sshtest --docker "host=ssh://my-ownhost-name" pwd
 > docker context ls
 > docker context use pwd
 > export DOCKER_HOST="tcp://ip172-18-0-6-bufhg71qckh000cq0ae0.direct.labs.play-with-docker.com:2375"
