@@ -12,6 +12,7 @@ WITH PWD:
 > for c in `docker context ls -q`; do docker -c $c ps; done 
 > docker -c default ps
 > docker -c pwd ps
+> vi ~/.ssh/config  --- way to connect a remote machine securely
 
 
 --------------------------------------------------------------
