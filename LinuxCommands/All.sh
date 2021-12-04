@@ -42,6 +42,7 @@ lsmod | egrep 'cifs'
 G
 ------------
 gnome-system-monitor
+gnome-system-monitor
 
 
 M:
@@ -111,6 +112,9 @@ sudo umount /mnt/win_share
 systemctl -t service -a 
 systemctl status docker
 sudo systemctl -t service -a | grep 'Samba'
+
+sudo apt-get install gnome-system-monitor
+gnome-system-monitor
 
 
 
