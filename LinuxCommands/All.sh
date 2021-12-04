@@ -85,6 +85,7 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo lsblk -o NAME,FSTYPE,SIZE,MOUNTPOINT,LABEL
 sudo apt update
 sudo apt install openjdk-8-jdk
+sudo apt install openjdk-11-jdk
 
 
 sudo apt update
