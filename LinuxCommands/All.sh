@@ -76,6 +76,7 @@ sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install 
 sudo apt-get remove
+sudo apt-get check
 dpkg --list
 sudo apt-get remove <package-name>
 sudo apt-get purge <package-name>
